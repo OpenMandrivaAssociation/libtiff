@@ -6,12 +6,12 @@
 
 Summary:	A library of functions for manipulating TIFF format image files
 Name:		libtiff
-Version:	4.0.6
+Version:	4.0.7
 Release:	1
 License:	BSD-like
 Group:		System/Libraries
 Url:		http://www.remotesensing.org/libtiff/
-Source0:	ftp://ftp.remotesensing.org/pub/libtiff/tiff-%{version}.tar.gz
+Source0:	http://download.osgeo.org/libtiff/tiff-%{version}.tar.gz
 Patch1:		tiff-3.9.1-no_contrib.diff
 BuildRequires:	libtool
 BuildRequires:	jbig-devel
@@ -92,6 +92,7 @@ export CXXFLAGS="%{optflags}"
 #temporary disabled due upstream fix
 #%check
 # 
+
 %install
 mkdir -p %{buildroot}/{%{_bindir},%{_datadir}}
 rm -rf installed_docs
@@ -103,7 +104,6 @@ install -m0644 libtiff/tif_dir.h %{buildroot}%{_includedir}/
 # multiarch policy
 %multiarch_includes %{buildroot}%{_includedir}/tiffconf.h
 
-# cleanup
 %files progs
 %{_bindir}/*
 %{_mandir}/man1/*
