@@ -42,6 +42,7 @@ BuildRequires:	pkgconfig(libwebp)
 %endif
 BuildRequires:	pkgconfig(zlib)
 %if %{with compat32}
+BuildRequires:	libc6
 BuildRequires:	devel(libjpeg)
 BuildRequires:	devel(libzstd)
 BuildRequires:	devel(liblzma)
