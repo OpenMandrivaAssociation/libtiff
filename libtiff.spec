@@ -3,12 +3,12 @@
 %bcond_without compat32
 %endif
 
-%define major 5
-%define libname %mklibname tiff %{major}
-%define libxx %mklibname tiffxx %{major}
+%define major 6
+%define libname %mklibname tiff
+%define libxx %mklibname tiffxx
 %define devname %mklibname tiff -d
-%define lib32name %mklib32name tiff %{major}
-%define lib32xx %mklib32name tiffxx %{major}
+%define lib32name %mklib32name tiff
+%define lib32xx %mklib32name tiffxx
 %define dev32name %mklib32name tiff -d
 %bcond_without bootstrap
 
@@ -21,11 +21,11 @@
 
 Summary:	A library of functions for manipulating TIFF format image files
 Name:		libtiff
-Version:	4.4.0
+Version:	4.5.0
 Release:	%{?beta:0.%{beta}.}1
 License:	BSD-like
 Group:		System/Libraries
-Url:		http://www.remotesensing.org/libtiff/
+Url:		http://libtiff.maptools.org/
 Source0:	http://download.osgeo.org/libtiff/tiff-%{version}%{?beta:%{beta}}.tar.gz
 Patch1:		tiff-3.9.1-no_contrib.diff
 BuildRequires:	libtool
@@ -98,6 +98,8 @@ programs which will manipulate TIFF format image files using the libtiff
 library.
 
 %if %{with compat32}
+# lib32name == name
+%if 0
 %package -n %{lib32name}
 Summary:	A library of functions for manipulating TIFF format image files (32-bit)
 Group:		System/Libraries
@@ -107,6 +109,7 @@ The libtiff package contains a library of functions for manipulating TIFF
 (Tagged Image File Format) image format files. TIFF is a widely used file
 format for bitmapped images. TIFF files usually end in the .tif extension
 and they are often quite large.
+%endif
 
 %package -n %{lib32xx}
 Summary:	A library of functions for manipulating TIFF format image files (32-bit)
