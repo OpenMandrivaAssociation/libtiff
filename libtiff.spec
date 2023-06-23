@@ -21,7 +21,7 @@
 
 Summary:	A library of functions for manipulating TIFF format image files
 Name:		libtiff
-Version:	4.5.0
+Version:	4.5.1
 Release:	%{?beta:0.%{beta}.}1
 License:	BSD-like
 Group:		System/Libraries
