@@ -22,7 +22,7 @@
 Summary:	A library of functions for manipulating TIFF format image files
 Name:		libtiff
 Version:	4.5.1
-Release:	%{?beta:0.%{beta}.}1
+Release:	%{?beta:0.%{beta}.}2
 License:	BSD-like
 Group:		System/Libraries
 Url:		http://libtiff.maptools.org/
@@ -126,6 +126,10 @@ Group:		Development/C
 Requires:	%{devname} = %{version}-%{release}
 Requires:	%{lib32name} = %{version}-%{release}
 Requires:	%{lib32xx} = %{version}-%{release}
+Requires:	devel(libzstd)
+Requires:	devel(liblzma)
+Requires:	devel(libjpeg)
+Requires:	devel(libz)
 
 %description -n %{dev32name}
 This package contains the header files and .so libraries for developing
