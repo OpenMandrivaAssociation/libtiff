@@ -1,24 +1,24 @@
-diff -up tiff-4.5.0/Makefile.am.1~ tiff-4.5.0/Makefile.am
---- tiff-4.5.0/Makefile.am.1~	2023-04-28 16:42:23.727814576 +0200
-+++ tiff-4.5.0/Makefile.am	2023-04-28 16:47:05.119904206 +0200
+diff -up tiff-4.6.0/Makefile.am.1~ tiff-4.6.0/Makefile.am
+--- tiff-4.6.0/Makefile.am.1~	2023-09-06 22:02:07.570180975 +0200
++++ tiff-4.6.0/Makefile.am	2023-09-06 22:09:58.788205462 +0200
 @@ -60,7 +60,7 @@ distcheck-hook:
  	rm -rf $(distdir)/_build/cmake
  	rm -rf $(distdir)/_inst/cmake
  
--SUBDIRS = port libtiff tools build contrib test doc
-+SUBDIRS = port libtiff tools build test doc
+-SUBDIRS = port libtiff tools build contrib test doc tools/unsupported
++SUBDIRS = port libtiff tools build test doc tools/unsupported
  
- release:
- 	(rm -f $(top_srcdir)/RELEASE-DATE && echo $(LIBTIFF_RELEASE_DATE) > $(top_srcdir)/RELEASE-DATE)
-diff -up tiff-4.5.0/Makefile.in.1~ tiff-4.5.0/Makefile.in
---- tiff-4.5.0/Makefile.in.1~	2023-04-28 16:42:23.727814576 +0200
-+++ tiff-4.5.0/Makefile.in	2023-04-28 16:47:09.880955264 +0200
-@@ -445,7 +445,7 @@ EXTRA_DIST = \
+ 
+ NEW_LIBTIFF_RELEASE_DATE=$(shell date +"%Y%m%d")
+diff -up tiff-4.6.0/Makefile.in.1~ tiff-4.6.0/Makefile.in
+--- tiff-4.6.0/Makefile.in.1~	2023-09-06 22:02:07.570180975 +0200
++++ tiff-4.6.0/Makefile.in	2023-09-06 22:10:04.035261154 +0200
+@@ -430,7 +430,7 @@ EXTRA_DIST = \
  	libtiff-4.pc.in
  
  @TIFF_DOCS_TRUE@dist_doc_DATA = $(docfiles)
--SUBDIRS = port libtiff tools build contrib test doc
-+SUBDIRS = port libtiff tools build test doc
+-SUBDIRS = port libtiff tools build contrib test doc tools/unsupported
++SUBDIRS = port libtiff tools build test doc tools/unsupported
+ NEW_LIBTIFF_RELEASE_DATE = $(shell date +"%Y%m%d")
  pkgconfigdir = $(libdir)/pkgconfig
  pkgconfig_DATA = libtiff-4.pc
- 
