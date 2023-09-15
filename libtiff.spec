@@ -17,7 +17,7 @@
 # (tpg) enable PGO build
 %bcond_without pgo
 
-%define beta rc1
+#define beta rc1
 
 Summary:	A library of functions for manipulating TIFF format image files
 Name:		libtiff
