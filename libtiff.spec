@@ -25,7 +25,7 @@ Version:	4.7.0
 Release:	%{?beta:0.%{beta}.}1
 License:	BSD-like
 Group:		System/Libraries
-Url:		http://libtiff.maptools.org/
+Url:		https://libtiff.maptools.org/
 Source0:	http://download.osgeo.org/libtiff/tiff-%{version}%{?beta:%{beta}}.tar.gz
 #Patch1:		tiff-3.9.1-no_contrib.diff
 BuildRequires:	libtool
