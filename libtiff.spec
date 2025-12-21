@@ -28,6 +28,11 @@ Group:		System/Libraries
 Url:		https://libtiff.maptools.org/
 Source0:	http://download.osgeo.org/libtiff/tiff-%{version}%{?beta:%{beta}}.tar.gz
 #Patch1:		tiff-3.9.1-no_contrib.diff
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	libtool
 BuildRequires:	jbig-devel
 BuildRequires:	pkgconfig(libjpeg)
