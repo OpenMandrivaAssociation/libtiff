@@ -21,7 +21,7 @@
 
 Summary:	A library of functions for manipulating TIFF format image files
 Name:		libtiff
-Version:	4.7.0
+Version:	4.7.2
 Release:	%{?beta:0.%{beta}.}1
 License:	BSD-like
 Group:		System/Libraries
@@ -30,10 +30,8 @@ Source0:	http://download.osgeo.org/libtiff/tiff-%{version}%{?beta:%{beta}}.tar.g
 #Patch1:		tiff-3.9.1-no_contrib.diff
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libtool-base
 BuildRequires:	slibtool
 BuildRequires:	make
-BuildRequires:	libtool
 BuildRequires:	jbig-devel
 BuildRequires:	pkgconfig(libjpeg)
 BuildRequires:	pkgconfig(libzstd)
